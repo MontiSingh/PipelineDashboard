@@ -5,7 +5,7 @@ const config = require('../config');
 
 module.exports.search = (event, context, callback) => {
     let client = new elasticsearch.Client({
-        host: 'https://vpc-dashboardhub-jxvidnahynn6mri4uk6hxvpcfe.eu-west-2.es.amazonaws.com',
+        host: 'https://vpc-dashboardhub-jxvidnahynn6mri4uk6hxvpcfe.eu-west-2.es.amazonaws.com:9200',
         log: 'trace'
     });
 
