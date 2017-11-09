@@ -26,6 +26,14 @@ provider:
 functions:
   auth:
     handler: auth/handler.auth
+  elasticsearch:
+    handler: environments/elastic.search
+    events:
+      - http:
+          path: elasticsearch
+          method: get
+          integration: lambda-proxy
+          cors: true
   publicEnvironmentList:
     handler: environments/list.public
     events:
